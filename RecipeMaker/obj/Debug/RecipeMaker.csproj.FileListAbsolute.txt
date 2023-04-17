@@ -1,0 +1,8 @@
+C:\Users\ebenm\source\repos\RecipeMaker\bin\Debug\RecipeMaker.exe.config
+C:\Users\ebenm\source\repos\RecipeMaker\bin\Debug\RecipeMaker.exe
+C:\Users\ebenm\source\repos\RecipeMaker\bin\Debug\RecipeMaker.pdb
+C:\Users\ebenm\source\repos\RecipeMaker\obj\Debug\RecipeMaker.csproj.AssemblyReference.cache
+C:\Users\ebenm\source\repos\RecipeMaker\obj\Debug\RecipeMaker.csproj.SuggestedBindingRedirects.cache
+C:\Users\ebenm\source\repos\RecipeMaker\obj\Debug\RecipeMaker.csproj.CoreCompileInputs.cache
+C:\Users\ebenm\source\repos\RecipeMaker\obj\Debug\RecipeMaker.exe
+C:\Users\ebenm\source\repos\RecipeMaker\obj\Debug\RecipeMaker.pdb
