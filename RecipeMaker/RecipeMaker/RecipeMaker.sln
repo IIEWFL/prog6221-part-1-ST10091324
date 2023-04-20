@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeMaker", "RecipeMaker.csproj", "{F25BBDFA-E324-4D5C-B44D-DA438EC5FA05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F25BBDFA-E324-4D5C-B44D-DA438EC5FA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25BBDFA-E324-4D5C-B44D-DA438EC5FA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25BBDFA-E324-4D5C-B44D-DA438EC5FA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25BBDFA-E324-4D5C-B44D-DA438EC5FA05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83D54517-7AAC-4AF7-A00E-00DB888D5B36}
+	EndGlobalSection
+EndGlobal
