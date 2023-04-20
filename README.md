@@ -1,1 +1,15 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Oa99dRjC)
+This project is about a recipe maker.
+the main goal is to have a fully functional graphic user interface that will allow the user to:
+- add ingredient names
+- add ingredient quantities
+- add ingredient measurements
+- add steps to make the recipe
+- display those ingredient values and steps
+- remove ingredients
+- increase quantities of ingredients and much more
+
+the user will be able to perform more functions as the project evolves
+the project is written in C# and is currently limited to the command line
+for a deeper dive into the functionality of the project, have a look at the code
+
+By Eben Nkulu Mwema
