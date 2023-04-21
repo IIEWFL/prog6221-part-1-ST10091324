@@ -1,30 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RecipeMaker
 {
-    internal class Recipe
+    internal abstract class Recipe
     {
         //instantianting and encapsulating fields
-        private int quantity;
-        private string name;
-        private string measurement;
-        private string description;
-
-        public Recipe(string nameOfIngredient, int userQuantity, string measurementOfIngredient)
-        {
-            name = nameOfIngredient;
-            quantity = userQuantity;
-            measurement = measurementOfIngredient;
-        }
-
-        public Recipe(string descriptionOfIngredient)
-        {
-            description = descriptionOfIngredient;
-        }
+        protected int quantity;
+        protected string name;
+        protected string measurement;
+        protected string description;
 
         //implementing accessor methods
         public int getQuantity()
@@ -47,15 +36,8 @@ namespace RecipeMaker
             return description;
         }
 
-        public void displayRecipe()
-        {
-            Console.WriteLine();
-        }
-
-        //String manupulation
-        public void addToArray()
-        {
-           
-        }
+        //Looping through each element in the array
+        //to displaying each ingredients
+        public abstract void displayArrayElements(Recipe[] recipeObject);
     }
 }
