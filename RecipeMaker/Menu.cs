@@ -18,6 +18,7 @@ namespace RecipeMaker
         private Ingredients ingredientsObj;
         private Ingredients[] ingredientsArray;
         private Steps[] stepsArray;
+        private int[] arrayOfQuantities;
 
         //printing a specific symbol n times for format purposes
         private void printSymbols(char printCharacter, int printAmount)
@@ -50,6 +51,7 @@ namespace RecipeMaker
         private void getIngredientsFromUser()
         {
             ingredientsArray = new Ingredients[numberOfIngredients];
+            arrayOfQuantities = new int[numberOfIngredients];
             int iIncrementor = 1;
 
             for (int i = 0; i < numberOfIngredients; i++)
@@ -59,6 +61,7 @@ namespace RecipeMaker
 
                 Console.Write("Enter ingredient " + iIncrementor + " quantity: ");
                 ingredientQuantity = Convert.ToInt32(Console.ReadLine());
+                arrayOfQuantities[i] = ingredientQuantity;
 
                 Console.Write("Enter ingredient " + iIncrementor + " unit of measurement: ");
                 unitsOfMeasurement = Console.ReadLine();
@@ -92,18 +95,100 @@ namespace RecipeMaker
             printSymbols('=', 15, " Recipe captured ");
         }
 
-        public void displayMenu()
+        private void scaleQuantities()
         {
-            printSymbols('=', 15, " Recipe Maker ");
-            Console.Write("Enter number of ingredients: ");
-            numberOfIngredients = Convert.ToInt32(Console.ReadLine());
+            int increaseQuantityBy;
+            int tempQuantity;
+            Console.Write("Increase Quantity by: ");
+            increaseQuantityBy = Convert.ToInt32(Console.ReadLine());
 
-            getIngredientsFromUser();
-            getDescriptionsFromUser();
+            if(increaseQuantityBy > 3)
+            {
+                Console.WriteLine("Increase factor cannot exceed 3");
+            }
+            else
+            {
+                foreach(Recipe quantity in ingredientsArray)
+                {    
+                    tempQuantity = quantity.getQuantity() * increaseQuantityBy;
+                }
+            }
+        }
 
+        private void resetQuantities()
+        {
+
+        }
+
+        private void clearArrayData(Recipe[] objectRecipe)
+        {
+            var recipeList = objectRecipe.ToList();
+            recipeList.Clear();
+
+            objectRecipe = recipeList.ToArray();
+        }
+
+        private void addNewRecipe()
+        {
+            try
+            {
+                Console.Write("Enter number of ingredients: ");
+                numberOfIngredients = Convert.ToInt32(Console.ReadLine());
+                getIngredientsFromUser();
+                getDescriptionsFromUser();
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid input entered, no recipe saved");
+            }
             ingredientsObj.displayArrayElements(ingredientsArray);
             stepsObj.displayArrayElements(stepsArray);
- 
+        }
+
+        private void exitMenu()
+        {
+            Console.WriteLine("Press any button to close application...");
+            //Preventing the console from immediately closing during runtime
+            Console.ReadKey();
+        }
+
+        public void displayMenu()
+        {
+            int userChoice = 0;
+            while (userChoice != 5)
+            {
+                printSymbols('=', 15, " Recipe Maker ");
+                Console.WriteLine("Enter 1 to add new recipe\n" +
+                                  "Enter 2 to increase ingredient quantities\n" +
+                                  "Enter 3 to reset ingredient quantities\n" +
+                                  "Enter 4 to delete added recipe\n" +
+                                  "Enter 5 to exit system");
+
+                Console.Write("Enter choice: ");
+                userChoice = Convert.ToInt32(Console.ReadLine());
+                switch (userChoice)
+                {
+                    case 1:
+                        addNewRecipe();
+                        break;
+                    case 2:
+                        scaleQuantities();
+                        break;
+                    case 3:
+                        resetQuantities();
+                        break;
+                    case 4:
+                        clearArrayData(ingredientsArray);
+                        clearArrayData(stepsArray);
+                        break;
+                    case 5:
+                        exitMenu();
+                        break;
+                    default:
+                        Console.WriteLine("Invalid number choice entered");
+                        break;
+                }
+            }
         }
     }
 }

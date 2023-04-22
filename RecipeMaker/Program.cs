@@ -12,10 +12,6 @@ namespace RecipeMaker
         {
             Menu menuObj = new Menu();
             menuObj.displayMenu();
-            
-            Console.WriteLine("Press any button to close application...");
-            //Preventing the console from immediately closing during runtime
-            Console.ReadKey();
         }
     }
 }
