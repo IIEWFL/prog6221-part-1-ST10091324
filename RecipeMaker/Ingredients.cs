@@ -22,7 +22,7 @@ namespace RecipeMaker
             int incrementor = 1;
             foreach (Recipe recipeElement in recipeObject)
             {
-                Console.WriteLine("Recipe " + incrementor + ": " + recipeElement.getQuantity()+ " " + recipeElement.getMeasurement() + 
+                Console.WriteLine("Ingredient " + incrementor + ": " + recipeElement.getQuantity()+ " " + recipeElement.getMeasurement() + 
                                     " of " + recipeElement.getName());
                 incrementor++;
             }
