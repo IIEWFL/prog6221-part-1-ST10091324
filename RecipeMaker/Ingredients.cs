@@ -16,7 +16,7 @@ namespace RecipeMaker
             measurement = measurementOfIngredient;
         }
 
-        //Looping through each element in the array to displaying each ingredients
+        //Loops through each element in the array to displaying each ingredients
         public override void displayArrayElements(Recipe[] recipeObject)
         {
             int incrementor = 1;

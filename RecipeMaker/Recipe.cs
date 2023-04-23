@@ -15,7 +15,7 @@ namespace RecipeMaker
         protected string measurement;
         protected string description;
 
-        //implementing accessor methods
+        //declaring accessor methods
         public int getQuantity()
         {
             return quantity;

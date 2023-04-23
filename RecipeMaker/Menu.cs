@@ -12,15 +12,14 @@ namespace RecipeMaker
         private int numberOfIngredients;
         private int ingredientQuantity;
         private int numberOfSteps;
+        private int increaseQuantityBy;
         private string ingredientName;
         private string unitsOfMeasurement;
         private string stepDescription = "";
-        private Steps stepsObj;
         private Ingredients ingredientsObj;
+        private Steps stepsObj;
         private Ingredients[] ingredientsArray;
         private Steps[] stepsArray;
-        private int[] arrayOfQuantities;
-        private int increaseQuantityBy;
 
         //prints a specific symbol n times for format purposes
         public void printSymbols(char printCharacter, int printAmount)
@@ -53,7 +52,6 @@ namespace RecipeMaker
         private void getIngredientsFromUser()
         {
             ingredientsArray = new Ingredients[numberOfIngredients];
-            arrayOfQuantities = new int[numberOfIngredients];
             int iIncrementor = 1;
 
             for (int i = 0; i < numberOfIngredients; i++)
@@ -63,7 +61,6 @@ namespace RecipeMaker
 
                 Console.Write("Enter ingredient " + iIncrementor + " quantity: ");
                 ingredientQuantity = Convert.ToInt32(Console.ReadLine());
-                arrayOfQuantities[i] = ingredientQuantity;
 
                 Console.Write("Enter ingredient " + iIncrementor + " unit of measurement: ");
                 unitsOfMeasurement = Console.ReadLine();
