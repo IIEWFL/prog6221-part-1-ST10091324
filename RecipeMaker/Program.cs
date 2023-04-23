@@ -10,6 +10,7 @@ namespace RecipeMaker
     {
         static void Main(string[] args)
         {
+            //creates an instance of our menu class and calls the displayMenu method to display the console application
             Menu menuObj = new Menu();
             menuObj.displayMenu();
         }

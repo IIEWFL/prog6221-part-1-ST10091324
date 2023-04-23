@@ -8,13 +8,13 @@ namespace RecipeMaker
 {
     internal class Steps : Recipe
     {
+        //creates a constructor and mutates the inherited instance field using the value passed into the constructor
         public Steps(string descriptionOfStep)
         {
             description = descriptionOfStep;
         }
 
-        //Looping through each element in the array
-        //to displaying each ingredients
+        //Looping through each element in the array to displaying each ingredients
         public override void displayArrayElements(Recipe[] recipeObject)
         {
             int incrementor = 1;
@@ -23,7 +23,6 @@ namespace RecipeMaker
                 Console.WriteLine("Step " + incrementor + ": " + stepsElement.getDescription());
                 incrementor++;
             }
-            Console.WriteLine();
         }
     }
 }

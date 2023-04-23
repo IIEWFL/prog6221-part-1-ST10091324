@@ -36,8 +36,7 @@ namespace RecipeMaker
             return description;
         }
 
-        //Looping through each element in the array
-        //to displaying each ingredients
+        //method to be implemented by derived class to display elements in the array
         public abstract void displayArrayElements(Recipe[] recipeObject);
     }
 }

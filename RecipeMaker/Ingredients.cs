@@ -8,6 +8,7 @@ namespace RecipeMaker
 {
     internal class Ingredients: Recipe
     {
+        //creates a constructor and mutates the inherited instance fields using the values being passed into the constructor
         public Ingredients(string nameOfIngredient, int userQuantity, string measurementOfIngredient)
         {
             name = nameOfIngredient;
@@ -15,8 +16,7 @@ namespace RecipeMaker
             measurement = measurementOfIngredient;
         }
 
-        //Looping through each element in the array
-        //to displaying each ingredients
+        //Looping through each element in the array to displaying each ingredients
         public override void displayArrayElements(Recipe[] recipeObject)
         {
             int incrementor = 1;
@@ -26,7 +26,6 @@ namespace RecipeMaker
                                     " of " + recipeElement.getName());
                 incrementor++;
             }
-            Console.WriteLine();
         }
     }
 }
