@@ -9,7 +9,7 @@ namespace RecipeMaker
     internal class Ingredients: Recipe
     {
         //creates a constructor and mutates the inherited instance fields using the values being passed into the constructor
-        public Ingredients(string nameOfIngredient, int userQuantity, string measurementOfIngredient)
+        public Ingredients(string nameOfIngredient, double userQuantity, string measurementOfIngredient)
         {
             name = nameOfIngredient;
             quantity = userQuantity;

@@ -10,13 +10,19 @@ namespace RecipeMaker
     internal abstract class Recipe
     {
         //instantianting and encapsulating fields
-        protected int quantity;
+        protected double quantity;
         protected string name;
         protected string measurement;
         protected string description;
 
+        //declaring an mutator method
+        public void setQuantity(double quantityValue)
+        {
+            quantity = quantityValue;
+        }
+
         //declaring accessor methods
-        public int getQuantity()
+        public double getQuantity()
         {
             return quantity;
         }

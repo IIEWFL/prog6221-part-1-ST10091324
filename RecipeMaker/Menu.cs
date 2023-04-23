@@ -10,9 +10,9 @@ namespace RecipeMaker
     {
         //instantianting and encapsulating fields
         private int numberOfIngredients;
-        private int ingredientQuantity;
+        private double ingredientQuantity;
         private int numberOfSteps;
-        private int increaseQuantityBy;
+        private double increaseQuantityBy;
         private string ingredientName;
         private string unitsOfMeasurement;
         private string stepDescription = "";
@@ -96,29 +96,42 @@ namespace RecipeMaker
 
         private void scaleQuantities()
         {
-            double tempQuantity;
-            Console.Write("Increase Quantity by: ");
-            increaseQuantityBy = Convert.ToInt32(Console.ReadLine());
-
-            if(increaseQuantityBy > 3)
+            if (ingredientsObj == null)
             {
-                Console.WriteLine("Increase factor cannot exceed 3");
+                Console.WriteLine("No quantities available to modify");
             }
             else
             {
-                foreach(Recipe quantity in ingredientsArray)
-                {    
-                    tempQuantity = quantity.getQuantity() * increaseQuantityBy;
+                double tempQuantity;
+                Console.Write("Increase Quantity by: ");
+                increaseQuantityBy = Convert.ToDouble(Console.ReadLine());
+
+                if (increaseQuantityBy > 3)
+                {
+                    Console.WriteLine("Increase factor cannot exceed 3");
                 }
-                Console.WriteLine("QUANTITIES INCREASED");
+                else
+                {
+                    foreach (Recipe quantity in ingredientsArray)
+                    {
+                        tempQuantity = (quantity.getQuantity() * increaseQuantityBy);
+                        quantity.setQuantity(tempQuantity);
+                    }
+                    Console.WriteLine("QUANTITIES INCREASED");
+                }
             }
+            
         }
 
         private void resetQuantities()
         {
-            if (increaseQuantityBy == 0)
+            if (ingredientsObj == null)
             {
-                Console.WriteLine("Quantities were never changed");
+                Console.WriteLine("No quantities available to modify");
+            }
+            else if (increaseQuantityBy == 0)
+            {
+                Console.WriteLine("Original quantities were never changed");
             }
             else
             {
@@ -126,18 +139,37 @@ namespace RecipeMaker
 
                 foreach (Recipe quantity in ingredientsArray)
                 {
-                    tempQuantity = quantity.getQuantity() / increaseQuantityBy;
+                    tempQuantity = (int)(quantity.getQuantity() / increaseQuantityBy);
+                    quantity.setQuantity(tempQuantity);
                 }
                 Console.WriteLine("QUANTITIES RESET");
             }
         }
 
+        /*
+            * Resizing the arrays and seting their values to default values. "Clears" the arrays in a way
+            * This is not necessarry since the getIngredientsFromUser and getDescriptionsFromUser methods already
+            * resize and initialize the arrays everytime during runtime when they are called, this is just to fulfill the PoE requirement
+            * of having an option in the menu to clear the array
+        */
         private void clearArrayData()
         {
-            //Reinitialising the arrays, this only sets the existing elements inside the array to null or zero 
-            ingredientsArray = new Ingredients[0];
-            stepsArray = new Steps [0];
-            Console.WriteLine("ARRAYS CLEARED");
+            /*
+                * Checks if the arrays have elements in them
+                * if there are no elements, nothing happens and a message is displayed to the user
+                * if there are elements, they will be "cleared"
+            */
+            if(ingredientsArray == null && stepsArray == null)
+            {
+                Console.WriteLine("NOTHING TO CLEAR");
+            }
+            else
+            {
+                ingredientsArray = new Ingredients[0];
+                stepsArray = new Steps [0];
+                Console.WriteLine("RECIPE CLEARED");
+            }
+            
         }
 
         private void addNewRecipe()
@@ -182,7 +214,7 @@ namespace RecipeMaker
         {
             int userChoice = 0;
             //Running the application until the user decides to close it
-            while (userChoice != 5)
+            while (userChoice != 6)
             {
                 printSymbols('=', 15, " Recipe Maker ");
                 Console.WriteLine("Enter 1 to add new recipe\n" +
