@@ -1,0 +1,26 @@
+=================== PART 1 REFERENCE ====================
+The code for arrays was inspired by
+Bro Code
+C# arrays
+Available at: https://www.youtube.com/watch?v=IHMmPVEOT64
+=========================================================
+The code for inheritance was inspired by
+Bro Code
+C# inheritance
+Available at: https://www.youtube.com/watch?v=EvSyka9vJho
+=========================================================
+The code for abstract classes and method was inspired by
+Bro Code
+C# abstract classes
+Available at: https://www.youtube.com/watch?v=06BrbJm7Sho
+=========================================================
+The code for for loops was inspired by
+Bro Code
+C# for loops
+Available at: https://www.youtube.com/watch?v=h4hY2hho73Q
+=========================================================
+The code for objects was inspired by
+Bro Code
+C# objects
+Available at: https://www.youtube.com/watch?v=heoTab1e41A
+=========================================================
