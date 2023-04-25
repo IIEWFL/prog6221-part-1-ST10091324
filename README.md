@@ -1,5 +1,5 @@
 # This project is about a recipe maker
-the main goal is to have a fully functional graphic user interface that will allow the user to:
+The main goal is to have a fully functional graphic user interface that will allow the user to:
 - Add ingredient names
 - Add ingredient quantities
 - Add ingredient measurements
@@ -8,9 +8,9 @@ the main goal is to have a fully functional graphic user interface that will all
 - Remove ingredients
 - Increase quantities of ingredients and much more
 
-the user will be able to perform more functions as the project evolves.
-the project is written in C# and is currently limited to the command line.
-for a deeper dive into the functionality of the project, have a look at the code.
+The user will be able to perform more functions as the project evolves.
+The project is written in C# and is currently limited to the command line.
+For a deeper dive into the functionality of the project, have a look at the code.
 
 ## Downloading, Opening and Running the project part 1
 - Heard over to the main branch of this project
