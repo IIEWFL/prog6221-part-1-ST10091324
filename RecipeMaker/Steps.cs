@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecipeMaker
 {
+    //inherits values from base class recipe
     internal class Steps : Recipe
     {
         //creates a constructor and mutates the inherited instance field using the value passed into the constructor

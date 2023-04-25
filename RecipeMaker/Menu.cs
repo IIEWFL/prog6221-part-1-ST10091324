@@ -65,7 +65,9 @@ namespace RecipeMaker
                 Console.Write("Enter ingredient " + iIncrementor + " unit of measurement: ");
                 unitsOfMeasurement = Console.ReadLine();
 
+                //passes the user input into the constructor and assigns their values to their instance fields
                 ingredientsObj = new Ingredients(ingredientName, ingredientQuantity, unitsOfMeasurement);
+                //assigns the recipe object with all the information to the ingredient array
                 ingredientsArray[i] = ingredientsObj;
 
                 iIncrementor++;
@@ -191,6 +193,11 @@ namespace RecipeMaker
         //prints every recipe object
         private void printRecipe()
         {
+            /*
+                * if one or all of the instance objects are null the program does even have to attempt to display the recipe data 
+                * because recipe data was not saved due to an error or the user did not add a recipe 
+                * it also prevents null reference exceptions from occuring
+            */
             if (ingredientsObj == null && stepsObj == null)
             {
                 Console.WriteLine("No ingredients or steps available to display, no recipe data saved"); 

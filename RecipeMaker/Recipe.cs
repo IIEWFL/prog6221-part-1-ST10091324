@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace RecipeMaker
 {
+    //Base class to be inherited from
     internal abstract class Recipe
     {
         //instantianting and encapsulating fields
