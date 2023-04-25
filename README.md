@@ -1,4 +1,4 @@
-#This project is about a recipe maker
+# This project is about a recipe maker
 the main goal is to have a fully functional graphic user interface that will allow the user to:
 - add ingredient names
 - add ingredient quantities
