@@ -21,6 +21,7 @@ namespace RecipeMaker
             int incrementor = 1;
             foreach (Recipe stepsElement in recipeObject)
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Step " + incrementor + ": " + stepsElement.getDescription());
                 incrementor++;
             }
